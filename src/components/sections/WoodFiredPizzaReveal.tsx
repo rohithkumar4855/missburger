@@ -140,7 +140,7 @@ const ChickenBucketReveal = () => {
                 <img
                   src={BUCKET_IMAGE}
                   alt="Chicken Bucket"
-                  className="w-[85%] md:w-[105%] max-w-none h-auto object-contain drop-shadow-[0_30px_50px_rgba(0,0,0,0.9)]"
+                  className="w-[85%] md:w-[90%] max-w-none h-auto object-contain drop-shadow-[0_30px_50px_rgba(0,0,0,0.9)]"
                 />
               </motion.div>
 
