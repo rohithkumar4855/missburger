@@ -106,13 +106,12 @@ const ChickenBucketReveal = () => {
           {/* Main Visual Container */}
           <motion.div 
             style={{ x: sceneX, scale: sceneScale }}
-            // Removed mobile max-height constraint so the bucket centers cleanly in the full mobile screen
             className="relative flex flex-col items-center justify-center w-full md:w-1/2 flex-1 h-full md:h-auto md:max-h-none"
           >
-            {/* FIXED TEXT PLACEMENT: Changed from absolute to relative to prevent clipping */}
+            {/* FIXED TEXT PLACEMENT: Removed hidden md:block so the text shows on mobile too */}
            <motion.div 
               style={{ opacity: leftTextOpacity, y: leftTextY }}
-              className="hidden md:block relative z-[80] text-center w-full mt-8 md:mt-25 mb-2 md:mb-8"
+              className="relative z-[80] text-center w-full mt-8 md:mt-25 mb-2 md:mb-8"
             >
               <div className="flex items-center justify-center gap-2 mb-1">
                 <Sparkles size={14} className="text-amber-500 fill-amber-500 md:w-[18px] md:h-[18px]" />
@@ -171,7 +170,6 @@ const ChickenBucketReveal = () => {
           {/* Right Side: Content Panel */}
           <motion.div 
             style={{ opacity: panelOpacity, x: panelX }}
-            // ADDED "hidden md:flex" to completely remove the card section on mobile view
             className="hidden md:flex flex-col justify-end md:justify-center w-[95%] sm:w-[85%] md:w-[45%] max-w-lg z-[90] shrink-0 md:mt-5 mb-4 md:mb-0"
           >
             <div className="bg-zinc-900/80 md:bg-zinc-900/40 backdrop-blur-2xl border border-white/10 p-5 sm:p-8 md:p-10 rounded-[2rem] md:rounded-[3rem] shadow-2xl relative overflow-hidden">
